@@ -1,21 +1,23 @@
 Summary:	adobe-utopia-75dpi font
 Summary(pl):	Font adobe-utopia-75dpi
 Name:		xorg-font-font-adobe-utopia-75dpi
-Version:	0.99.0
-Release:	0.01
+Version:	0.99.2
+Release:	0.1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/font/font-adobe-utopia-75dpi-%{version}.tar.bz2
-# Source0-md5:	c7084294f3038a5d26ffbafc2651864d
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-adobe-utopia-75dpi-%{version}.tar.bz2
+# Source0-md5:	421a4f1a9e4d784b3e4d37f1f639c776
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-app-bdftopcf
 BuildRequires:	xorg-app-mkfontdir
 BuildRequires:	xorg-app-mkfontscale
-BuildRequires:	xorg-font-font-util
+BuildRequires:	xorg-font-font-util >= 0.99.2
 BuildRequires:	xorg-util-util-macros
+Requires(post,postun):	fontpostinst
+Requires:	%{_fontsdir}/75dpi
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,7 +33,8 @@ Font adobe-utopia-75dpi.
 %{__aclocal}
 %{__autoconf}
 %{__automake}
-%configure
+%configure \
+	--with-fontdir=%{_fontsdir}/75dpi
 
 %{__make}
 
@@ -44,6 +47,13 @@ rm -rf $RPM_BUILD_ROOT
 %clean
 rm -rf $RPM_BUILD_ROOT
 
+%post
+fontpostinst 75dpi
+
+%postun
+fontpostinst 75dpi
+
 %files
 %defattr(644,root,root,755)
-%{_libdir}/X11/fonts/75dpi/*
+%doc COPYING ChangeLog
+%{_fontsdir}/75dpi/*.pcf.gz
