@@ -1,12 +1,12 @@
 Summary:	adobe-utopia-75dpi font
 Summary(pl):	Font adobe-utopia-75dpi
 Name:		xorg-font-font-adobe-utopia-75dpi
-Version:	0.99.2
+Version:	1.0.1
 Release:	0.1
 License:	MIT
 Group:		Fonts
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/font/font-adobe-utopia-75dpi-%{version}.tar.bz2
-# Source0-md5:	421a4f1a9e4d784b3e4d37f1f639c776
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/font/font-adobe-utopia-75dpi-%{version}.tar.bz2
+# Source0-md5:	dd912284e4750023f9682812532fa033
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -55,5 +55,5 @@ fontpostinst 75dpi
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %{_fontsdir}/75dpi/*.pcf.gz
