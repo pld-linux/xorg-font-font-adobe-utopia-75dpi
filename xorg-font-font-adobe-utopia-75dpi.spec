@@ -1,5 +1,5 @@
 Summary:	adobe-utopia-75dpi font
-Summary(pl.UTF-8):   Font adobe-utopia-75dpi
+Summary(pl.UTF-8):	Font adobe-utopia-75dpi
 Name:		xorg-font-font-adobe-utopia-75dpi
 Version:	1.0.1
 Release:	0.1
