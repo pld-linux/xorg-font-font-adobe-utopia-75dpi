@@ -1,12 +1,12 @@
 Summary:	Adobe Utopia 75dpi bitmap font
 Summary(pl.UTF-8):	Font bitmapowy 75dpi Adobe Utopia
 Name:		xorg-font-font-adobe-utopia-75dpi
-Version:	1.0.2
+Version:	1.0.3
 Release:	1
 License:	distributable (see COPYING)
 Group:		Fonts
 Source0:	http://xorg.freedesktop.org/releases/individual/font/font-adobe-utopia-75dpi-%{version}.tar.bz2
-# Source0-md5:	71dffebeeb702d10876555c361fb69cf
+# Source0-md5:	0d694a5591e89d2315d841f414668344
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
